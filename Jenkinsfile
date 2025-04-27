@@ -10,8 +10,9 @@ pipeline {
             steps {
                 // This step should not normally be used in your script. Consult the inline help for details.
                 withDockerRegistry(credentialsId: 'express-jenkins-pipeline', url: 'https://index.docker.io/v1/') {
-                    sh 'docker build -t trandung2001/express-jenkins-pipeline .'
-                    sh 'docker push trandung2001/express-jenkins-pipeline'
+                    sh 'docker version'
+                    // sh 'docker build -t trandung2001/express-jenkins-pipeline .'
+                    // sh 'docker push trandung2001/express-jenkins-pipeline'
                 }
             }
         }
